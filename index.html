@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لاماسو للسياحة والسفر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #00aaff;
+            color: white;
+            padding: 50px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .btn {
+            background: #ffaa00;
+            color: red;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* خانات الرحلات */
+        #trips {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .trip-box {
+            background: #00aaff;
+            color: beige;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .trip-box:hover {
+            transform: translateY(-5px);
+            background: #0088cc;
+        }
+
+        #trip-details {
+            background: #f4f4f4;
+            padding: 30px 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: right;
+        }
+
+        #details-content p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مرحبا بكم في رحلاتنا ✈️</h1>
+        <p>أفضل الرحلات من العراق الى كل مكان بالعالم</p>
+        <a href="#trips" class="btn">شاهد الرحلات</a>
+    </header>
+
+    <!-- قسم الرحلات -->
+    <section id="trips">
+        <div class="trip-box" onclick="showDetails('baghdad-to-istanbul')">
+            <h3>بغداد → إسطنبول</h3>
+            <p>انقر للمزيد</p>
+        </div>
+
+        <div class="trip-box" onclick="showDetails('baghdad-to-tehran')">
+            <h3>بغداد → طهران</h3>
+            <p>انقر للمزيد</p>
+        </div>
+
+        <div class="trip-box" onclick="showDetails('baghdad-to-isfahan')">
+            <h3>بغداد → أصفهان</h3>
+            <p>انقر للمزيد</p>
+        </div>
+    </section>
+
+    <!-- تفاصيل الرحلات -->
+    <section id="trip-details">
+        <h2>تفاصيل الرحلة</h2>
+        <div id="details-content">
+            <p>اضغط على أي رحلة لمشاهدة التفاصيل هنا</p>
+        </div>
+    </section>
+
+    <script>
+        function showDetails(trip) {
+            let content = document.getElementById("details-content");
+
+            if(trip === 'baghdad-to-istanbul') {
+                content.innerHTML = `
+                    <h3>بغداد → إسطنبول</h3>
+                    <p>السعر:  324,000 دينار عراقي ذهاب فقط</p>
+                    <p> 597,000 دينار عراقي ذهاب وعودة</p>
+                    <p>مدة الرحلة: 3 ساعات</p>
+                `;
+            }
+            else if(trip === 'baghdad-to-tehran') {
+                content.innerHTML = `
+                    <h3>بغداد → طهران</h3>
+                    <p>السعر: 162,000 دينار عراقي ذهاب فقط</p>
+                    <p>278,000 دينار عراقي ذهاب وعودة</p>
+                    <p>مدة الرحلة: 2 ساعة 30 دقيقة</p>
+                `;
+            }
+            else if(trip === 'baghdad-to-isfahan') {
+                content.innerHTML = `
+                    <h3>بغداد → أصفهان</h3>
+                    <p>تاريخ الرحلة: 2 مارس 2026</p>
+                    <p>السعر: 170,000 دينار عراقي</p>
+                    <p>مدة الرحلة: 2 ساعة 45 دقيقة</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <p>واتساب: 07728466229
+        <p>مواقع التواصل الاجتماعي: lamasoo_travel_iraq</p>
+    </section>
+</body>
+</html>
